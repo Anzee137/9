@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <header class="header">
+      <h1>TODO</h1>
+      <div class="change-mode" id="changeMode" onclick="modeChange()">
+        <img src="images/icon-sun.svg" alt="dark/light mode" class="icon" id="sun">
+        <img src="images/icon-moon.svg" alt="dark/light mode" class="icon" id="moon" hidden>
+      </div>
+    </header>
+    <main id="main">
+      <div class="input"><input class="goal" type="text" placeholder="Currently typing" id="input" value=""></div>
+
+
+      <div id="add"></div>
+      <div class="goal main-footer">
+        <span>
+          <p>
+            <!-- Add dynamic number -->
+            <span id="counter"></span> items left
+          </p>
+        </span>
+        <span>
+          <button class="selected button" id="button0" onclick="changeGoals(0)">All</button>
+          <button class="unselected button" id="button1" onclick="changeGoals(1)">Active</button>
+          <button class="unselected button" id="button2" onclick="changeGoals(2)">Completed</button>
+        </span>
+        <span>
+          <button class="unselected button" id="button3" onclick="clearCompleted()">Clear Completed</button>
+        </span>
+      </div>
+
+    </main>
+    <footer class="footer">
+      Drag and drop to reorder list
+    </footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/Anzee137">Artyom</a>.
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
